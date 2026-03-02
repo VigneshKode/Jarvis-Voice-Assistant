@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jarvis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../static/login.css">
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("about-link").addEventListener("click", function (event) {
+      event.preventDefault();
+      document.querySelector("#about").scrollIntoView({ behavior: "smooth" });
+    });
+  });
+</script>
+  </head>
+  <body>
+    <header>
+      <h2 class="logo">JARVIS</h2>
+      <nav class="navigation">
+        <a href="/" class="active">Home</a>
+        <a href="#about" id="about-link">About</a>
+        <a href="../registration" id="login-link">SignUP</a>
+      </nav>
+    </header>
+    <section class="parallax">
+      <img src="../static/hill1.png" id="hill1" />
+      <img src="../static/hill2.png" id="hill2" />
+      <img src="../static/hill3.png" id="hill3" />
+      <img src="../static/hill4.png" id="hill4" />
+      <img src="../static/hill5.png" id="hill5" />
+      <img src="../static/tree.png" id="tree" />
+      <img src="../static/leaf.png" id="leaf" />
+      <img src="../static/plant.png" id="plant" />
+    </section>
+    <div class="wrapper">
+      <h1>Login</h1>
+      <form action="/login" method="post">
+        <div class="input-box">
+          <input name="username" placeholder="username" required />
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          <input type="password" id="password" name="password" placeholder="password" required />
+
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+        <input type="submit" class="btn" value="Login" />
+        <div class="register-link">
+        <p>
+          Don't have an account? <a href="/registration">Register here</a>
+        </div>
+      </form>
+      </p>
+    </div>
+    <section class="sec" id="about">
+      <h2>Personalized Voice Assistant</h2>
+      <p>This Flask application integrates various functionalities, including voice input processing, text generation using OpenAI's GPT-3, database management, and web browsing automation. The application allows users to interact either by typing queries or through voice input.<br><br>
+
+        Upon receiving user input, the application processes it to perform various actions such as fetching the current time or date, opening specific websites like YouTube or Spotify, adding contacts, or generating responses using GPT-3. The conversational history is stored in a SQLite database, allowing users to review past interactions.<br><br>
+        
+        Additionally, users can register and authenticate to access personalized features like adding contacts. The application also enables making calls to contacts using the Android Debug Bridge (ADB) utility.<br><br>
+        
+        Overall, this application provides a versatile platform for interacting with AI-generated responses, managing contacts, and performing web-related tasks, all within a Flask-based web framework. It demonstrates the integration of multiple technologies to create a cohesive user experience.<br><br>
+      </p>
+      </p>
+    </section>
+  </body>
+</html>
