@@ -10,7 +10,7 @@ from datetime import datetime
 app = Flask(__name__, static_url_path='/static')
 
 # Set OpenAI API key
-openai.api_key = "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"
+openai.api_key = "Your-API_Key-Here"
 
 # Initialize text-to-speech engine
 engine = pyttsx3.init()
@@ -334,3 +334,4 @@ def send_message():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
